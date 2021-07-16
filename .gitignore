@@ -81,6 +81,7 @@ dist
 .idea
 .editorconfig
 .code-workspace
+.vscode
 
 # Service worker
 sw.*
