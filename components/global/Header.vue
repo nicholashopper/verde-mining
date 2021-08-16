@@ -5,10 +5,10 @@
         <nuxt-link class="btn block" to="/">Home</nuxt-link>
       </li>
       <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
+        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
       </li>
       <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
+        <nuxt-link class="btn block" to="/contact">Contact Us</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -22,6 +22,7 @@ export default {
 
 <style lang="postcss" scoped>
 .scrim-bg {
+  height: 1.00rem;
   &::before {
     content: '';
     z-index: -1;
@@ -32,9 +33,9 @@ export default {
     content: '';
     z-index: -1;
     opacity: 1;
-    animation: fadeIn1 500ms ease-in-out;
+    animation: fadeIn1 2000ms ease-in-out;
     @apply pointer-events-none absolute bottom-0 inset-x-0 h-16 -mb-12;
-    background: linear-gradient(to bottom, #111827, cubic-bezier(0.15, 0, 0.45, 1), transparent);
+    background: linear-gradient(to bottom, rgba(40, 93, 68, 0.5), cubic-bezier(0.15, 0, 0.45, 1), transparent);
   }
 }
 .nuxt-link-exact-active {
@@ -45,7 +46,7 @@ export default {
   & .scrim-bg {
     &::after {
       animation-name: fadeIn2;
-      background: linear-gradient(to bottom, #e5e7eb, cubic-bezier(0.15, 0, 0.45, 1), transparent);
+      background: linear-gradient(to bottom, rgb(209, 209, 209), cubic-bezier(0.15, 0, 0.45, 1), transparent);
     }
   }
   & .nuxt-link-exact-active {
