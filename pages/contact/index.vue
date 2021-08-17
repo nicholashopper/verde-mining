@@ -4,7 +4,7 @@
       <h1 class="title">
         Contact
       </h1>
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <div class="items-right">
           <p>
             <label>Your Name: <input type="text" name="name" /></label>   
