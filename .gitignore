@@ -94,3 +94,7 @@ sw.*
 
 # Local Netlify folder
 .netlify
+
+# Other project files
+*.ai
+*.pdf

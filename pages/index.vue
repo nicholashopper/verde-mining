@@ -4,7 +4,7 @@
       <h1 class="title text-center">Verde Mining</h1>
       <h2 class="subtitle text-center">Bitcoin Tech</h2>
     </section>
-
+    <!-- <embed src="../static/home-grid.svg"/> -->
     <section class="mt-8">
       <h3 class="text-primary-600 dark:text-primary-400 max-w-5xl mx-auto">Latest blog post</h3>
       <posts post-type="blog" :amount="1" />
