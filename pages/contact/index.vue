@@ -4,11 +4,8 @@
       <h1 class="title">
         Contact
       </h1>
-      <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
+      <form name="contact" method="POST" netlify>
         <div class="items-right">
-          <p class="hidden">     
-            <label>Don’t fill this out: <input name="bot-field"></label>   
-          </p>
           <p>
             <label>Your Name: <input type="text" name="name" /></label>   
           </p>
