@@ -75,7 +75,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa', '@nuxtjs/google-analytics'],
   /*
    ** Nuxt.js modules
    */
@@ -143,6 +143,11 @@ export default {
       lang: process.env.lang,
       ogHost: process.env.URL,
       ogImage: '/preview.jpg'
+    }
+  },
+  googleAnalytics: {
+    googleAnalytics: {
+      id: 'G-PNGRPW70Z2'
     }
   }
 }
