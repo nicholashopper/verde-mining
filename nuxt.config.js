@@ -146,6 +146,6 @@ export default {
     }
   },
   googleAnalytics: {
-    id: 'G-PNGRPW70Z2'
+    id: 'UA-205277864-1'
   }
 }
