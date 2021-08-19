@@ -71,11 +71,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-content-placeholders.js'],
+  plugins: ['~/plugins/vue-content-placeholders.js', '~/plugins/gtag'],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa', '@nuxtjs/google-analytics'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
@@ -142,10 +142,7 @@ export default {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
       lang: process.env.lang,
       ogHost: process.env.URL,
-      ogImage: '/preview.jpg'
+      ogImage: '/img/verde-logos/VerdeMining-Logo-Vertical.jpg'
     }
-  },
-  googleAnalytics: {
-    id: 'UA-205277864-1'
   }
 }
