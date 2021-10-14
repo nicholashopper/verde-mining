@@ -14,5 +14,3 @@ The Verde Team headed out of Midland, Texas at 6am to the well site to meet the 
 ![](/img/third-green.png)
 
 Once the power was live in the Hash Hut, the Verde team plugged in 23 Antminer T17+. Warm air was blasting out the sides. The Team opened a laptop, and confirmed Verde Mining was live.
-
-![Paul Cockerham explaining how much power will be running into the Hash Hut.](/img/forth-green.png)
