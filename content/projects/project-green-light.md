@@ -9,10 +9,10 @@ The much anticipated deployment date of October 1st 2021 was reached. Verde Mini
 ![Paul Cockerham surveying the move](/img/second-green.png)
 
 \
-The Verde Team headed out of Midland, Texas at 6am to the well site to meet the Operator. Additionally a team to transport the Hash Hut and a team to setup the natural gas generator were present.
+The Verde Team headed out of Midland, Texas at the crack of dawn. Waiting at the well site were the Operator, a team to transport the Hash Hut, and a team to setup the natural gas generator.
 
 ![](/img/third-green.png)
 
-Once the power was live in the Hash Hut, the Verde team plugged in 23 Antminer T17+. Warm air was blasting out the sides. The Team opened a laptop, and confirmed Verde Mining was live.
+Once the power was live in the Hash Hut, the Verde team plugged in 23 Miners (Antminers T17+). Warm air was blasting out the sides. The Team opened a laptop, and confirmed Verde Mining was live.
 
 ![](/img/forth-green.png)
