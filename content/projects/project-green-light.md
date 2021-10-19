@@ -4,9 +4,7 @@ title: Project Green Light
 description: Verde Mining's first deployment of miners to the field
 cover: /img/green-light.png
 gallery:
-  - /img/second-green.png
   - /img/third-green.png
-  - /img/forth-green.png
 ---
 The much anticipated deployment date of October 1st 2021 was reached. Verde Mining was ready to start mining Bitcoin. 
 
