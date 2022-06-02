@@ -9,7 +9,7 @@ An opinionated starter template for a quick start with the following technologie
 ![ntn-boilerplate-preview-dark](https://user-images.githubusercontent.com/770560/109560601-5dcc5c80-7adc-11eb-9eb8-98663294b6aa.png)
 
 ## 🔋 Batteries included
-
+- Add ne instruction
 - Nuxt.js (in "universal mode", where both SEO and speed is great)
 - Vue 2
 - Vuex (supported by adding to `/store`, but not implemented)
