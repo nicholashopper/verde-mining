@@ -10,6 +10,9 @@
       <li class="flex-1 ml-2">
         <nuxt-link class="btn block" to="/contact">Contact</nuxt-link>
       </li>
+      <li class ="flex-1 ml-2">
+        <nuxt-link class="btn block" to="/Market">Market</nuxt-link> 
+      </li>
     </ul>
   </nav>
 </template>
