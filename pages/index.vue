@@ -20,7 +20,7 @@
 }
 
 .banner {
-  width: 40%;
+  width: 50%;
 }
 
 .content-box {
