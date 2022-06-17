@@ -1,11 +1,13 @@
 ---
 category: update
-title: Website Fixed
-description: Verde Mining's website is fully functional again
-cover: /img/verde-home-page.png
+title: New Member to the Team
+description: Verde Mining welcomes a UTPB student as an intern
+cover: /img/utpb-campus.jpg
 gallery:
   - /img/daniel-f.jpg
 ---
-In recent events, Verde Mining has seen the addition of Daniel Fernandez, a UTPB senior, serving as an intern for the summer. With this addition to the team, the major problem with the website has been resolved.
+UTPB and Verde Mining have entered a partnership to give UTPB students an opportunity to work and gain professional experience in the field connected to their major. This was all made possible by a summer grant from the government that allowed UTPB to give dozens of students the opportunity to find a paid internship in the Odessa/Midland area. Verde Mining is one of the companies that decided to participate in the program, which led to the addition of Daniel Fernandez to the team.
 
-The team has some substatial projects in the works, so expect to see more activity from Verde Mining in the near future!
+Daniel is a a UTPB senior who is apiring to work in the Software Engineering field after he achieves his Bachelors of Computer Science. This internship is a great opportunity for him to gain the professional experience many employers expect candidates to have in the Software Development industry. 
+
+This opportunity is mutually beneficial for all parties involved, as UTPB prepares more of its students for the workplace, Verde Mining receives assistance and strengthens its ties to the Permian Basin, and Daniel moves further along his career path. Only the future will tell of the fruitful effects from this valuable partnership.
