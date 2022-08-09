@@ -1,24 +1,30 @@
 <template>
-  <main class = "home-grid">
+  <main>
     <section class="self-center items-center justify-center button-links">
       <header>
         <div class = "a">
-          <strong>Example Mac Address:</strong> 
-          <br>{{notes.id}}
+          <strong>Mac Address:</strong> 
+          <br>{{links.id}}
         </div>
       </header>
       <body>
+        
+        <li v-for="link in links">
+           <div>
+           <a class="linkbutton justify-center items-center" v-bind:href="link.url">{{ link.name }}</a>
+          </div>
+        </li>
         <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="notes.links[0].url">Settings</a>
+          <a class="linkbutton justify-center items-center" v-bind:href="links[0].url">Settings</a>
         </div>
         <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="notes.links[1].url">/lights/on</a>
+          <a class="linkbutton justify-center items-center" v-bind:href="links[1].url">/lights/on</a>
         </div>
         <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="notes.links[1].url">/lights/off</a>
+          <a class="linkbutton justify-center items-center" v-bind:href="links[2].url">/lights/off</a>
         </div>
         <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="notes.links[2].url">Notes</a>
+          <a class="linkbutton justify-center items-center" v-bind:href="links[3].url">Notes</a>
         </div>
       </body>
     </section>
@@ -26,17 +32,35 @@
 </template>
 
 <script>
- import axios from 'axios'
+import axios from 'axios'
 
- export default {
-  async asyncData() {
-  const {data} = await axios.get('http://localhost:8080/qr-code/12%3A34%3A00%3A00%3A00%3A00')
-   return {
-    notes: data
-   }
+export default{
+
+ 
+
+
+ async asyncData({params}){
+  const {data} = await axios.get(`http://localhost:8080/qr-code/${params.id}`)
+  data.links.forEach(link => {
+      switch (link.type) {
+        case "SETTINGS":
+          link.name = "Settings"
+          break;
+      
+        default:
+          link.name = link.url
+          break;
+      }
+    });
+  return{
+   response: data,
+   links: data.links
   }
  }
+}
 </script>
+
+
 
 <style>
 .home-grid {
