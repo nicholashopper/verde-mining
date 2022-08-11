@@ -1,17 +1,15 @@
 <template>
-  <main class="home-grid wrapper" >
+  <main class="home-grid" >
     <section class="self-center items-center justify-center button-links">
       <header>
-        <div class = "a">
+        <div class = "macAddress">
           <strong>Mac Address:</strong> 
           <br>{{response.id}}
         </div>
       </header>
       <body>
-        <div v-for="(link, index) in links" :key="index">
-          <Button class="justify-center" v-on:click="sendRequest(link.url, link.httpRequest)" :href="link.url">
-            {{link.name}}
-          </Button>
+        <div class = "margin:3" v-for="(link, index) in links" :key="index">
+          <button class="button" v-on:click="sendRequest(link.url, link.httpRequest)">{{link.name}}</button>
         </div>
       </body>
     </section>
@@ -54,7 +52,7 @@ layout: 'customqr',
  methods:{
   sendRequest(url, httpRequest){
     if(httpRequest == "PATCH"){
-      axios.patch(link.url)
+      axios.patch(url)
         .then(response => {
           console.log(response.data)
         })
@@ -63,7 +61,7 @@ layout: 'customqr',
       })
     }
     else if(httpRequest == "GET"){
-      axios.get(link.url)
+      axios.get(url)
         .then(response => {
           console.log(response.data)
         })
@@ -71,7 +69,12 @@ layout: 'customqr',
         console.log(error)
       })
     }
+    else if(httpRequest == "SETTINGS"){
+      location.assign(url)
+    }
   }
+
+  
   }
 }
 
@@ -82,13 +85,14 @@ layout: 'customqr',
 <style>
 .home-grid {
   background: url("assets/home-grid-v2.svg") no-repeat center bottom;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
 .button-links {
   border-color: var(--border-color);
-  border-width: thin;
+  border-width: thick;
   border-radius: 0.25rem;
   padding-top: 1rem;
   padding-right: 1rem;
@@ -97,26 +101,50 @@ layout: 'customqr',
   position: absolute;
   top: 12px;
   margin: 0;
+  width: 90%;
+  max-width: 320px;
 }
 
-div.a{
+div.macAddress{
+  margin: 0 auto;
+  margin-bottom: 15px;
   text-align: center;
-  border-width: thin;
+  border-width: 3px;
   border-color:var(--border-color);
   border-radius: 1;
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+  max-width: 300px;
+
 }
 
-.linkbutton {
-  display: inline-flex;
-  padding: 10px;
-  margin: 5px;
-  background: var(--border-color);
-  width: 200px;
-  text-align: center;
-  color: #000000;
-}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--border-color);
+    font-family: "Quicksand", sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .button:hover {
+    background: var(--border-color);
+    color: #fff;
+  }
 </style>
