@@ -1,30 +1,17 @@
 <template>
-  <main>
+  <main class="home-grid wrapper" >
     <section class="self-center items-center justify-center button-links">
       <header>
         <div class = "a">
           <strong>Mac Address:</strong> 
-          <br>{{links.id}}
+          <br>{{response.id}}
         </div>
       </header>
       <body>
-        
-        <li v-for="link in links">
-           <div>
-           <a class="linkbutton justify-center items-center" v-bind:href="link.url">{{ link.name }}</a>
-          </div>
-        </li>
-        <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="links[0].url">Settings</a>
-        </div>
-        <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="links[1].url">/lights/on</a>
-        </div>
-        <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="links[2].url">/lights/off</a>
-        </div>
-        <div>
-          <a class="linkbutton justify-center items-center" v-bind:href="links[3].url">Notes</a>
+        <div v-for="(link, index) in links" :key="index">
+          <Button class="justify-center" v-on:click="sendRequest(link.url, link.httpRequest)" :href="link.url">
+            {{link.name}}
+          </Button>
         </div>
       </body>
     </section>
@@ -36,8 +23,7 @@ import axios from 'axios'
 
 export default{
 
- 
-
+layout: 'customqr',
 
  async asyncData({params}){
   const {data} = await axios.get(`http://localhost:8080/qr-code/${params.id}`)
@@ -45,6 +31,14 @@ export default{
       switch (link.type) {
         case "SETTINGS":
           link.name = "Settings"
+          break;
+        case "COMMAND":
+          var arr = link.url.split("/");
+          var len = arr.length;
+          link.name = "/" + arr[len - 2] + "/" + arr[len - 1]
+          break;
+        case "HISTORY":
+          link.name = "Notes"
           break;
       
         default:
@@ -56,8 +50,31 @@ export default{
    response: data,
    links: data.links
   }
- }
+ },
+ methods:{
+  sendRequest(url, httpRequest){
+    if(httpRequest == "PATCH"){
+      axios.patch(link.url)
+        .then(response => {
+          console.log(response.data)
+        })
+      .catch(error => {
+        console.log(error)
+      })
+    }
+    else if(httpRequest == "GET"){
+      axios.get(link.url)
+        .then(response => {
+          console.log(response.data)
+        })
+      .catch(error => {
+        console.log(error)
+      })
+    }
+  }
+  }
 }
+
 </script>
 
 
@@ -77,17 +94,9 @@ export default{
   padding-right: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
-
-}
-
-input, label, textarea {
-    display: ruby-base-container;
-    width: 100%;
-    
-}
-
-.mac-address{
-  text-size-adjust: 30px;
+  position: absolute;
+  top: 12px;
+  margin: 0;
 }
 
 div.a{

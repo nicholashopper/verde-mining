@@ -1,10 +1,13 @@
 <template>
   <Button :is="type" :href="href" class="button">
     <slot></slot>
+    
   </Button>
 </template>
 
 <script>
+import axios from 'axios'
+
   export default {
     props: {
       href: {
@@ -24,15 +27,22 @@
           return 'button'
         }
       }
+    },
+    async sendRequest(id){
+      const res = await axios.patch(id);
+      res.data.headers['Content-Type']; //application/json;charset=utf-8
+      return{
+        res
+      }
     }
   }
 </script>
 
 <style scoped>
   .button {
-    display: inline-block;
-    margin: 0.5em 0;
-    padding: 1em 2em;
+    display: inline-flex;
+    margin: 5px;
+    padding: 10px;
     background: #fff;
     border: 2px solid var(--border-color);
     border-radius: 3px;
@@ -43,9 +53,10 @@
     letter-spacing: 0.02em;
     line-height: 1;
     text-decoration: none;
-    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
+    width: 200px;
+    text-align: center;
   }
 
   .button:hover {

@@ -1,5 +1,5 @@
 <template>
-  <main class = "home-grid">
+  <!-- <main class = "home-grid"> -->
     <section class="self-center items-center justify-center button-links">
       <header>
         <div class = "a">
@@ -22,7 +22,7 @@
         </div>
       </body>
     </section>
-  </main>
+  <!-- </main> -->
 </template>
 
 <script>
