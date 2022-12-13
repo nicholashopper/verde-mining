@@ -5,6 +5,9 @@
         <nuxt-link class="btn block" to="/">Home</nuxt-link>
       </li>
       <li class="flex-1 ml-2">
+        <nuxt-link class="btn block" to="/events">Events</nuxt-link>
+      </li>
+      <li class="flex-1 ml-2">
         <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
       </li>
       <li class="flex-1 ml-2">
