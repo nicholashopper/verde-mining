@@ -35,6 +35,8 @@ Verde Mining is offering a 3-day training course for prospective Bitcoin mine op
 
 For more information, please contact Mike at the email address provided. A QR code and Verde Mining logo will be provided for use on the training flyer.
 
+
+
 ## Sign up
 🚨 🚨 🚨 [RSVP Here](https://docs.google.com/forms/d/1Yr3-JB7v39hP1yLl7tfJ08KPPA6HQzbKi-5fafCfJpQ) 🚨 🚨 🚨
 We will follow up with the email address you provide.
