@@ -12,7 +12,7 @@ gallery:
 3-day Training Course Off-Grid Mining
 =====================
 
-Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. The course will take place from January 24 – 26 and will be taught by industry experts Paul Cockerham, Michael Santaniello, and more.
+Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. The course will take place from January 24 – 26
 
 ### The course fee of $3300 per person includes:
 
@@ -36,7 +36,7 @@ Verde Mining is offering a 3-day training course for prospective Bitcoin mine op
 *   Warm clothes for the West Texas winter
 *   Notebook and laptop
 
-For more information, please contact Mike at the email address provided. A QR code and Verde Mining logo will be provided for use on the training flyer.
+
 
 
 
