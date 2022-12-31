@@ -4,20 +4,16 @@
       v-for="(post, index) in posts"
       :key="index"
     >
-      <nuxt-link
-        :to="`${postType}/${post.slug}`"
-        class="card card--clickable"
-      >
-        <template v-if="postType === 'projects' || postType === 'events' || postType === 'team'">
-          <span class="flex-1">
-            <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6>
-            <h3 class="card-title">{{ post.title }}</h3>
-            <p class="mt-2">{{ post.description }}</p>
-          </span>
+ 
+        <template v-if="postType === 'team'">
+         
+            <h3 class="card-title">{{ post.name }}</h3>
+            <p class="mt-2">{{ post.title }}</p>
+        
           <img
-            v-if="post.cover"
+            v-if="post.avatar"
             class="cover-image"
-            :src="post.cover"
+            :src="post.avatar"
           >
         </template>
 
@@ -33,7 +29,6 @@
             <p class="mt-2">{{ post.description }}</p>
           </span>
         </template>
-      </nuxt-link>
     </li>
   </ul>
   <div v-else-if="loading" class="cards">
@@ -55,7 +50,7 @@
       postType: {
         type: String,
         default: 'project',
-        validator: (val) => ['blog', 'projects', 'update', 'training', 'news', ].includes(val),
+        validator: (val) => ['team' ].includes(val),
       },
       amount: { // ? https://content.nuxtjs.org/fetching#limitn
         type: Number,
@@ -109,3 +104,9 @@
     },
   }
 </script>
+
+<style>
+
+</style>
+
+
