@@ -4,31 +4,19 @@
       v-for="(post, index) in posts"
       :key="index"
     >
- 
-        <template v-if="postType === 'team'">
-         
-            <h3 class="card-title">{{ post.name }}</h3>
-            <p class="mt-2">{{ post.title }}</p>
-        
+    <template v-if="postType === 'team'">
+      <div class="column">
           <img
-            v-if="post.avatar"
-            class="cover-image"
-            :src="post.avatar"
+           v-if="post.avatar"
+           style="width: 500px; height: 300px"
+           :src="post.avatar"
           >
-        </template>
-
-        <template v-else>
-          <span class="w-full">
-            <span class="flex justify-between align-baseline">
-              <h3 class="card-title">{{ post.title }}</h3>
-              <h6
-                v-if="post.createdAt"
-                class="self-start inline-block mt-0 py-1 px-2 bg-gray text-white text-base font-medium rounded-sm whitespace-no-wrap"
-              >{{ formatDate(post.createdAt) }}</h6>
-            </span>
-            <p class="mt-2">{{ post.description }}</p>
-          </span>
-        </template>
+         <div class="container">
+          <h2>{{ post.name }}</h2>
+          <p class="description">{{ post.title }}</p>
+         </div>
+        </div>
+    </template>
     </li>
   </ul>
   <div v-else-if="loading" class="cards">
@@ -42,7 +30,9 @@
     {{ amount > 1 ? 'Posts not found' : 'Post not found' }}
   </p>
 </template>
-
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <script>
   export default {
     name: 'Posts',
@@ -104,9 +94,41 @@
     },
   }
 </script>
-
-<style>
-
+<style scoped>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.description {
+  color: grey;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
 </style>
+
 
 
