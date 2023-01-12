@@ -1,99 +1,86 @@
 <template>
-  <ul v-if="posts.length > 0" class="cards">
-    <li
-      v-for="(post, index) in posts"
-      :key="index"
-    >
-    <template v-if="postType === 'team'">
+  <div>
+    <div class="row">
       <div class="column">
-          <img
-           v-if="post.avatar"
-           style="width: 500px; height: 300px"
-           :src="post.avatar"
-          >
-         <div class="container">
-          <h2>{{ post.name }}</h2>
-          <p class="description">{{ post.title }}</p>
+        <div class="card">
+          <img src="/img/paul-avatar.jpg" alt="Luke" style="width:100%">
+          <div class="container">
+            <h2>Paul Cockerham</h2>
+            <p class="title">Partner</p>
+            <p>* 15 years of oil and gas industry experience</p>
+            <p>* Operations Engineer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="column">
+        <div class="card">
+          <img src="/img/luis-avatar.jpg" alt="Luis" style="width:100%">
+          <div class="container">
+            <h2>Luis Caro-Delgado</h2>
+            <p class="title">Partner</p>
+            <p>* Pursuing a Ph.D. at UT Austin with an emphasis in Energy Systems-of-Systems</p>
+            <p>* Over 18 years of local and international Oil and Gas industry</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="/img/luke-avatar.jpg" alt="Luke" style="width:100%">
+          <div class="container">
+            <h2>Luke Hawkins</h2>
+            <p class="title">Partner</p>
+            <p>* Managed and executed numerous acquisitions and subsequent development of oil and gas properties across the Permian Basin</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="/img/nicholas-avatar.jpg" alt="Nicholas" style="width:100%">
+          <div class="container">
+            <h2>Nicholas Hopper</h2>
+            <p class="title">Partner</p>
+            <p>* Over 5 years experience in software systems, monitoring, and data collection </p>
+          </div>
+        </div>
+      </div>
+  
+
+      <div class="column">
+        <div class="card">
+          <img src="/img/matt-avatar.jpg" alt="Matt" style="width:100%">
+          <div class="container">
+            <h2>Matt Cain</h2>
+            <p class="title">Field Technician</p>
          </div>
         </div>
-    </template>
-    </li>
-  </ul>
-  <div v-else-if="loading" class="cards">
-    <div v-for="placeholder in placeholderClasses" :key="placeholder.id" class="card">
-      <content-placeholders :rounded="true" :class="placeholder">
-        <content-placeholders-heading />
-      </content-placeholders>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="/img/daniel-avatar.jpg" alt="Daniel" style="width:100%">
+          <div class="container">
+            <h2>Daniel Fernandez</h2>
+            <p class="title">Intern</p>
+            <p>Computer Science Student at UT Permian Basin</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      
+    
     </div>
   </div>
-  <p v-else class="max-w-5xl mx-auto">
-    {{ amount > 1 ? 'Posts not found' : 'Post not found' }}
-  </p>
 </template>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+
 <script>
-  export default {
-    name: 'Posts',
-    props: {
-      postType: {
-        type: String,
-        default: 'project',
-        validator: (val) => ['team' ].includes(val),
-      },
-      amount: { // ? https://content.nuxtjs.org/fetching#limitn
-        type: Number,
-        default: 10,
-        validator: (val) => val >= 0 && val < 100,
-      },
-      sortBy: { // ? https://content.nuxtjs.org/fetching#sortbykey-direction
-        type: Object,
-        default: () => ({
-          key: 'slug',
-          direction: 'desc' // you probably want 'asc' here
-        }),
-        validator: (obj) => typeof obj.key === 'string' && typeof obj.direction === 'string',
-      }
-    },
-    data() {
-      return {
-        posts: [],
-        loading: true,
-      }
-    },
-    computed: {
-      placeholderClasses() {
-        const classes = ['w-full','w-2/3','w-5/6'];
-        return [...Array.from({ length: this.amount }, (v, i) => classes[i % classes.length])]; // repeats classes after one another
-      }
-    },
-    async mounted() {
-      this.loading = true;
-      this.posts = await this.fetchPosts();
-      this.loading = false;
-    },
-    methods: {
-      formatDate(dateString) {
-        const date = new Date(dateString)
-        return date.toLocaleDateString(process.env.lang) || ''
-      },
-      async fetchPosts(
-          postType = this.postType,
-          amount = this.amount,
-          sortBy = this.sortBy,
-        ) {
-        return this.$content(postType)
-          .sortBy(sortBy.key, sortBy.direction)
-          .limit(amount)
-          .fetch()
-          .catch((err) => {
-            error({ statusCode: 404, message: amount > 1 ? 'Posts not found' : 'Post not found' })
-          });
-      }
-    },
-  }
+export default {
+  name: "MyComponent"
+};
 </script>
+
 <style scoped>
 html {
   box-sizing: border-box;
@@ -102,11 +89,12 @@ html {
   box-sizing: inherit;
 }
 .column {
+  float: left;
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .column {
     width: 100%;
     display: block;
@@ -117,18 +105,26 @@ html {
 }
 .container {
   padding: 0 16px;
+  height:200px;
+  overflow:auto;
 }
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
-.description {
-  color: grey;
-  font-family: Arial, sans-serif;
-  font-size: 25px;
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #375d46;
+}
+
 </style>
-
-
-
