@@ -16,18 +16,11 @@
   "license": "MIT",
   "dependencies": {
     "@nuxt/content": "^1.13.1",
-<<<<<<< HEAD
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "mdb-vue-ui-kit": "^2.0.0",
     "nuxt": "^2.15.0",
     "vue-gtag": "^1.16.1"
-=======
-    "fs": "^0.0.1-security",
-    "nuxt": "^2.15.8",
-    "vue-gtag": "^1.16.1",
-    "vue-template-compiler": "^2.7.14"
->>>>>>> 8e21283fc7c1c3efa8ca18b85a6c8c10c125de1d
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.3",
