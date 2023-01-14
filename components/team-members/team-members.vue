@@ -92,7 +92,7 @@ html {
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
-  padding: 0 8px;
+  padding: 1rem;
 }
 @media screen and (max-width: 650px) {
   .column {
