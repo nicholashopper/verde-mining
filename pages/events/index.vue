@@ -1,6 +1,9 @@
 <template>
     <main>
       <section v-if="posts" class="w-full max-w-5xl mx-auto">
+        <!--
+            Certain styles like 'title' and such will be found in the assets/css folder.
+        -->
         <h1 class="title">Events</h1>
         <posts post-type="events" :amount="10" />
       </section>
