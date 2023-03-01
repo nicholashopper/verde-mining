@@ -8,7 +8,7 @@
         :to="`${postType}/${post.slug}`"
         class="card card--clickable"
       >
-        <template v-if="postType === 'projects' || postType === 'events'">
+        <template v-if="postType === 'projects' || postType === 'events' || postType === 'team'">
           <span class="flex-1">
             <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6>
             <h3 class="card-title">{{ post.title }}</h3>
@@ -55,7 +55,7 @@
       postType: {
         type: String,
         default: 'project',
-        validator: (val) => ['blog', 'projects', 'update', 'training', 'news'].includes(val),
+        validator: (val) => ['blog', 'projects', 'update', 'training', 'news', ].includes(val),
       },
       amount: { // ? https://content.nuxtjs.org/fetching#limitn
         type: Number,
