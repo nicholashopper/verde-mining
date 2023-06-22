@@ -1,6 +1,6 @@
 ---
 category: training
-title: January 2023 Training
+title: August 2023 Training
 description: Verde Mining is offering a 3-day training course for aspiring Bitcoin miners
 cover: /img/mining-farm.png
 gallery:
@@ -12,7 +12,7 @@ gallery:
 3-day Training Course Off-Grid Mining
 =====================
 
-Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. The course will take place from January 24 – 26
+Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. 
 
 ### The course fee of $3300 per person includes:
 
@@ -41,5 +41,4 @@ Verde Mining is offering a 3-day training course for prospective Bitcoin mine op
 
 
 ## Sign up
-🚨 🚨 🚨 [RSVP Here](https://docs.google.com/forms/d/1Yr3-JB7v39hP1yLl7tfJ08KPPA6HQzbKi-5fafCfJpQ) 🚨 🚨 🚨
-We will follow up with the email address you provide.
+Details are TBD and RSVP link will be up soon.
