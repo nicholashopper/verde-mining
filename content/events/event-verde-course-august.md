@@ -12,7 +12,7 @@ gallery:
 3-day Training Course Off-Grid Mining
 =====================
 
-Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. 
+Verde Mining is offering a 3-day training course on August 8th through the 11th for prospective Bitcoin mine operators. 
 
 ### The course fee of $5000 per person includes:
 
