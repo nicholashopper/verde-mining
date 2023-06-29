@@ -14,7 +14,7 @@ gallery:
 
 Verde Mining is offering a 3-day training course for prospective Bitcoin mine operators. 
 
-### The course fee of $3300 per person includes:
+### The course fee of $5000 per person includes:
 
 *   Hotel stay for 3 nights
 *   Breakfast at the hotel
@@ -39,6 +39,6 @@ Verde Mining is offering a 3-day training course for prospective Bitcoin mine op
 
 
 
-
 ## Sign up
-Details are TBD and RSVP link will be up soon.
+🚨 🚨 🚨 [RSVP Here](https://docs.google.com/forms/d/e/1FAIpQLSfPR-FKUm9ChVIE46nbU-ybiiCXabYHkLRNFiPUQWefo-LMQQ/viewform?pli=1) 🚨 🚨 🚨
+We will follow up with the email address you provide.
