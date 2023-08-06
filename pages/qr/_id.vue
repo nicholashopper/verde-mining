@@ -1,81 +1,22 @@
 <template>
   <main class="home-grid" >
     <section class="self-center items-center justify-center button-links">
-      <header>
-        <div class = "macAddress">
-          <strong>Mac Address:</strong> 
-          <br>{{response.id}}
-        </div>
+      <header class = "macAddress" onclick=redirect()>
+        <strong>Mac Address:</strong> 
+        <br>12:34:00:00:00:01
       </header>
-      <body>
-        <div class = "margin:3" v-for="(link, index) in links" :key="index">
-          <button class="button" v-on:click="sendRequest(link.url, link.httpRequest)">{{link.name}}</button>
-        </div>
-      </body>
     </section>
   </main>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default{
 
 layout: 'customqr',
-
- async asyncData({params}){
-  const {data} = await axios.get(`http://localhost:8080/qr-code/${params.id}`)
-  data.links.forEach(link => {
-      switch (link.type) {
-        case "SETTINGS":
-          link.name = "Settings"
-          break;
-        case "COMMAND":
-          var arr = link.url.split("/");
-          var len = arr.length;
-          link.name = "/" + arr[len - 2] + "/" + arr[len - 1]
-          break;
-        case "HISTORY":
-          link.name = "Notes"
-          break;
-      
-        default:
-          link.name = link.url
-          break;
-      }
-    });
-  return{
-   response: data,
-   links: data.links
-  }
- },
- methods:{
-  sendRequest(url, httpRequest){
-    if(httpRequest == "PATCH"){
-      axios.patch(url)
-        .then(response => {
-          console.log(response.data)
-        })
-      .catch(error => {
-        console.log(error)
-      })
-    }
-    else if(httpRequest == "GET"){
-      axios.get(url)
-        .then(response => {
-          console.log(response.data)
-        })
-      .catch(error => {
-        console.log(error)
-      })
-    }
-    else if(httpRequest == "SETTINGS"){
-      location.assign(url)
-    }
-  }
-
-  
-  }
+async asyncData({ redirect, params }) {
+  const customURL = `https://script.google.com/a/macros/verdemining.com/s/AKfycbyH2U2vyD4mTvoXSlQy51Ob60mgalCUBKTVSuCq5i2eWPwLhk0WdM7P8VmB0byvkLuw/exec?minerID=${params.id}`;
+  redirect(customURL);
+}
 }
 
 </script>
