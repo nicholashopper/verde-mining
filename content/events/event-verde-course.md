@@ -43,7 +43,7 @@ Verde Mining is offering a 3-day training course (Dates Listed Below) for prospe
 | Date Range           | Link                                                                                                      |
 |----------------------|-----------------------------------------------------------------------------------------------------------|
 | October 24th-27th 2023 | [RSVP Here](https://docs.google.com/forms/d/1R9pP9PxcQZyl67lFl5OEnb35ZaQLSd5x4ZxNxUpHqnE/viewform?pli=1) |
-| November 7th-10th 2023 | [RSVP Here](https://docs.google.com/forms/d/14w3w7w3dUPMGBN3gvAR6RONySN6Lsek7N-OeKsZF8P4/viewform?pli=1) |
+| November 7th-10th 2023 | Private Event |
 | December 5th-8th 2023 | [RSVP Here](https://docs.google.com/forms/d/1WhTuomynmb46ISwC2oZ8NSnKAzDc5DRw4L6ELj0DV3M/viewform?pli=1) |
 
 
