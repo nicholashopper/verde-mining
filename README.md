@@ -53,28 +53,6 @@ This way it doesn't clutter up your repo with large unmanageable files. But *do 
 
 ## Project commands
 
-0. 📦 Manage npm.
-Install nvm
-```bash
-brew update 
-brew install nvm
-mkdir ~/.nvm 
-```
-Update shell
-```bash
-vim ~/.bash_profile 
-```
-```bash
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-```
-Switch to correct npm version
-```bash
-nvm install v16.13.0
-nvm use v16.13.0
-```
-[Additional context](https://tecadmin.net/install-nvm-macos-with-homebrew/)
-
 1. 📦 Install dependencies.
 
 ```bash

@@ -1,4 +1,4 @@
- <template>
+<template>
   <main>
     <section>
       <h1> Test 2 </h1>
@@ -9,5 +9,5 @@
 <script>
 export default {
 }
-</script> 
+</script>
 

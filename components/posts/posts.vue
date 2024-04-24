@@ -55,7 +55,7 @@
       postType: {
         type: String,
         default: 'project',
-        validator: (val) => ['blog', 'projects', 'update', 'training', 'news', ].includes(val),
+        validator: (val) => ['blog', 'projects', 'update', 'training', 'news', ].includes(val)
       },
       amount: { // ? https://content.nuxtjs.org/fetching#limitn
         type: Number,
