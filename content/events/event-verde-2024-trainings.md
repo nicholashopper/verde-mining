@@ -44,7 +44,11 @@ Verde Mining is offering a 3-day training course (Dates Listed Below) for prospe
 |----------------------|-----------------------------------------------------------------------------------------------------------|
 | April 30th - May 2nd 2024 | Closed |
 | October 1st - 3rd 2024 | Closed |
-| December 3rd - 5th 2024 | [RSVP Here](https://forms.gle/iocxnNtzn8XureFdA) |
+| December 3rd - 5th 2024 | Closed |
+| April 8th - 10th 2025 | [RSVP Here](https://forms.gle/H5LYkWkbdvdDTDpF9) |
 
+[Also we offer Private Trainings](https://forms.gle/baXc7XdoMqz7zkFN6)
 
 We will follow up with the email address you provide.
+
+
